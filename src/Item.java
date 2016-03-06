@@ -1,6 +1,5 @@
-/**
- * Created by apple on 16/3/4.
- */
+import java.util.Objects;
+
 public class Item {
     public String barcode;
     public String name;
@@ -12,5 +11,21 @@ public class Item {
         this.name = name;
         this.unit = unit;
         this.price = price;
+    }
+
+    public boolean equals(Object object) {
+
+        Item item = (Item) object;
+
+        if (!barcode.equals(item.barcode)) {
+            return false;
+        }
+        if (!name.equals(item.name)) {
+            return false;
+        }
+        if (!unit.equals(item.unit)) {
+            return false;
+        }
+        return price == item.price;
     }
 }
