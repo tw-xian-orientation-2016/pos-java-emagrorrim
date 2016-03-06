@@ -1,6 +1,3 @@
-/**
- * Created by apple on 16/3/4.
- */
 public class Promotion {
     String type;
     String[] barcodes;
